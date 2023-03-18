@@ -6,27 +6,8 @@
   margin: 100px auto 0;
 }
 
-.header {
-  grid-column: 1/-1;
-  background-color: #dcd9d9;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-}
-
-.menu {
-  background-color: #999;
-}
-
 img {
   width: 150px;
-}
-
-li {
-  list-style: none;
 }
 
 .content {

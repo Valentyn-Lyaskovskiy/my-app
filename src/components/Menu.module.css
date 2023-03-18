@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  color: gold;
+  font-size: 22px;
+}
+
+.link.blue {
+  color: blue;
+}
+
+.menu {
+  background-color: #999;
+}
+
+li {
+  list-style: none;
+}
