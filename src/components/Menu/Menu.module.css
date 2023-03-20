@@ -12,6 +12,10 @@
   background-color: #999;
 }
 
+ul {
+  margin: 0;
+}
+
 li {
   list-style: none;
 }
