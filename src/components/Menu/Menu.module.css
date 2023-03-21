@@ -1,15 +1,8 @@
 .link {
   text-decoration: none;
-  color: gold;
+  color: #161616;
   font-size: 22px;
-}
-
-.link.blue {
-  color: blue;
-}
-
-.menu {
-  background-color: #999;
+  font-weight: 500;
 }
 
 ul {
@@ -20,4 +13,10 @@ ul {
 li {
   list-style: none;
   padding-top: 15px;
+}
+
+.active.link{
+  color: #ff7f50;
+  font-size: 24px;
+  font-weight: 700;
 }

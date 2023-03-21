@@ -1,27 +1,28 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import s from "./Menu.module.css";
 
 const Menu = () => {
   return (
-    <nav className="menu">
+    <nav>
       <ul>
         <li>
-          <a className={s.link} href="/profile">
+          <NavLink activeclassname={s.active} to="/profile">
             Profile
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a className={s.link} href="/dialogs">
+          <NavLink className={s.link} activeclassname={s.active} to="/dialogs">
             Messages
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a className={s.link} href="#">
+          <a className={`${s.link} ${s.active}`} href="#">
             News
           </a>
         </li>
         <li>
-          <a className={`${s.link} ${s.blue}`} href="#">
+          <a className={s.link} href="#">
             Music
           </a>
         </li>

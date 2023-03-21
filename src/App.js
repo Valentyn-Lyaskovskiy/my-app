@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Menu />
         <Routes>
-          <Route path="/profile" element={<Post className='image' />} />
+          <Route path="/profile" element={<Post />} />
           <Route path="/dialogs" element={<Dialogs />} />
         </Routes>
       </div>
