@@ -7,12 +7,18 @@ const Menu = () => {
     <nav>
       <ul>
         <li className={s.item}>
-          <NavLink activeClassName={s.activeLink} to="/profile">
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : s.item)}
+            to="/profile"
+          >
             Profile
           </NavLink>
         </li>
         <li className={s.item}>
-          <NavLink activeclassname={s.activeLink} to="/dialogs">
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : s.item)}
+            to="/dialogs"
+          >
             Messages
           </NavLink>
         </li>
