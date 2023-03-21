@@ -1,0 +1,8 @@
+.header img {
+  width: 170px;
+}
+
+.header {
+  grid-column: 1/-1;
+  background-color: #ff7f50;
+}

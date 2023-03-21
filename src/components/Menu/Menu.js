@@ -6,20 +6,18 @@ const Menu = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <NavLink activeclassname={s.active} to="/profile">
+        <li className={s.item}>
+          <NavLink activeClassName={s.activeLink} to="/profile">
             Profile
           </NavLink>
         </li>
-        <li>
-          <NavLink className={s.link} activeclassname={s.active} to="/dialogs">
+        <li className={s.item}>
+          <NavLink activeclassname={s.activeLink} to="/dialogs">
             Messages
           </NavLink>
         </li>
         <li>
-          <a className={`${s.link} ${s.active}`} href="#">
-            News
-          </a>
+          <a href="#">News</a>
         </li>
         <li>
           <a className={s.link} href="#">

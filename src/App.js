@@ -4,7 +4,7 @@ import "./App.css";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
-import Post from "./components/Profile/Post";
+import Profile from "./components/Profile/Profile";
 import logo from "./logo.svg";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Menu />
         <Routes>
-          <Route path="/profile" element={<Post />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/dialogs" element={<Dialogs />} />
         </Routes>
       </div>
