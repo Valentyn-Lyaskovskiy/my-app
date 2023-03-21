@@ -1,12 +1,10 @@
 import React from "react";
+import s from "./Post.module.css";
 
 const Post = (props) => {
   return (
-    <div className="header">
-      {props.message}
-      <div>
-        <span>Like 👍</span>
-      </div>
+    <div className={s.like}>
+      <span> 23 Like 👍</span>
     </div>
   );
 };
