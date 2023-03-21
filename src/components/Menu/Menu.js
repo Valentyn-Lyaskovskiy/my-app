@@ -1,16 +1,17 @@
 import React from "react";
 import s from "./Menu.module.css";
+
 const Menu = () => {
   return (
     <nav className="menu">
       <ul>
         <li>
-          <a className={s.link} href="#">
+          <a className={s.link} href="/profile">
             Profile
           </a>
         </li>
         <li>
-          <a className={s.link} href="#">
+          <a className={s.link} href="/dialogs">
             Messages
           </a>
         </li>
