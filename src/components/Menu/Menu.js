@@ -4,7 +4,7 @@ import s from "./Menu.module.css";
 
 const Menu = () => {
   return (
-    <nav>
+    <nav className={s.menu}>
       <ul>
         <li className={s.item}>
           <NavLink

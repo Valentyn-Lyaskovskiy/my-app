@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   font-weight: 500;
 }
@@ -11,8 +11,12 @@ a.activeLink {
   font-weight: 700;
 }
 
+.menu {
+  padding: 10px 10px;
+}
+
 nav {
-  background-color: #ff7f50;
+  background-color: #00d8ff;
 }
 
 ul {
@@ -20,7 +24,10 @@ ul {
   padding: 0;
 }
 
+li+li {
+  padding-top: 15px;
+}
+
 li {
   list-style: none;
-  padding-top: 15px;
 }

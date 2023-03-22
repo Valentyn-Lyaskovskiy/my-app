@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQztLRnAWYw2TSTe-eQpoMj3PM3qlfHddTKXA&usqp=CAU"
+        src="https://cdn.worldvectorlogo.com/logos/react-1.svg"
         alt="react logo"
       />
     </header>
