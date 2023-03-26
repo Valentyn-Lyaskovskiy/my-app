@@ -5,25 +5,19 @@ import s from "./Dialogs.module.css";
 const DialogItem = (props) => {
   let path = "dialogs/ + props.id";
   return (
-    <div className={s.dialog}>
-      <NavLink to={path}> {props.name}</NavLink>
+    <div>
+      <NavLink to={path}>{props.name}</NavLink>
     </div>
   );
 };
 const Dialogs = (props) => {
   return (
     <div className={s.dialogs}>
-      <div className="dialog-items">
+      <div className={s.dialogItem}>
         <DialogItem name="John" id="1" />
-        <div className={`${s.dialog} ${s.active}`}>
-          <NavLink to="dialogs/2">Amy</NavLink>
-        </div>
-        <div className={s.dialog}>
-          <NavLink to="dialogs/3">Mike</NavLink>
-        </div>
-        <div className={s.dialog}>
-          <NavLink to="dialogs/4">Greg</NavLink>
-        </div>
+        <DialogItem name="Amy" id="2" />
+        <DialogItem name="Mike" id="3" />
+        <DialogItem name="Greg" id="4" />
       </div>
       <div className="messages">
         <div className={s.message}>Hi, buddy!</div>

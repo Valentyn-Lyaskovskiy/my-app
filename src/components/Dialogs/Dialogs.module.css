@@ -8,10 +8,10 @@ a {
   font-size: 24px;
   padding: 10px 10px;
   display: grid;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 1.5fr 10fr;
 }
 
-.dialog.active a {
+.dialogItem.active a {
   color: #000080;
   font-weight: 700;
   font-size: 25px;
