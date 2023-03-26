@@ -1,3 +1,9 @@
+.message,
+a {
+  margin-bottom: 12px;
+  display: block;
+}
+
 .dialogs {
   font-size: 24px;
   padding: 10px 10px;
@@ -5,8 +11,9 @@
   grid-template-columns: 2fr 10fr;
 }
 
-.dialog.active {
+.dialog.active a {
   color: #000080;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 25px;
+  display: block;
 }
