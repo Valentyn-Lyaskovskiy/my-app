@@ -11,7 +11,8 @@ a {
   grid-template-columns: 1.5fr 10fr;
 }
 
-.dialog .active {
+.dialogItems .active {
   color: #000080;
   font-weight: 700;
+  text-transform: uppercase;  
 }
