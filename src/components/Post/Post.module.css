@@ -1,0 +1,13 @@
+.post{
+  color: #00d8ff;
+  background-color: #161616;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
