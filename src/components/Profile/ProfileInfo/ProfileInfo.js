@@ -5,9 +5,9 @@ const ProfileInfo = () => {
   return (
     <div>
       <div className={s.content}>
-        <img
+        <img className={s.contentImage}
           src="https://www.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg"
-          alt="image"
+          alt="nature"
         />
       </div>
       <div></div>
