@@ -10,7 +10,7 @@ const ProfileInfo = () => {
           alt="image"
         />
       </div>
-      <div>Avatar + description</div>
+      <div></div>
     </div>
   );
 };

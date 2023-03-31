@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import state from "./Redux/state";
 // const elem = <h2>REACT is a...</h2>;
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <App />
+  <App appState={state} />
 );
 // root.render(elem, document.getElementById("root"));
 
