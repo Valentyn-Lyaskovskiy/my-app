@@ -4,13 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import state from "./Redux/state";
-// const elem = <h2>REACT is a...</h2>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <App appState={state} />
-);
-// root.render(elem, document.getElementById("root"));
+root.render(<App state={state} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

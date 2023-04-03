@@ -14,13 +14,23 @@ function App(props) {
         <Header />
         <Menu />
         <Routes>
-          <Route path="/profile" element={<Profile posts={props.appState.posts} />} />
-          <Route path="/dialogs/*" element={<Dialogs dialogs={props.appState.dialogs} messages={props.appState.messages} />} />
+          <Route
+            path="/profile"
+            element={<Profile posts={props.state.profilePage.posts} />}
+          />
+          <Route
+            path="/dialogs/*"
+            element={
+              <Dialogs
+                dialogs={props.state.messagePage.dialogs}
+                messages={props.state.messagePage.messages}
+              />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
   );
 }
-debugger;
 
 export default App;
