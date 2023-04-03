@@ -8,11 +8,11 @@ a {
   font-size: 24px;
   padding: 10px 10px;
   display: grid;
-  grid-template-columns: 1.5fr 10fr;
+  grid-template-columns: 4fr 10fr;
 }
 
 .dialogItems .active {
   color: #000080;
   font-weight: 700;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
