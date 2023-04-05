@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 const state = {
   profilePage: {
     posts: [
@@ -15,53 +17,53 @@ const state = {
         id: 3,
         message: "I got my salary today!",
         likes: 11,
-      }
+      },
     ],
   },
   messagePage: {
     messages: [
       {
-        message: "Hi, buddy!"
+        message: "Hi, buddy!",
       },
       {
-        message: "Ping me when you are free."
+        message: "Ping me when you are free.",
       },
       {
-        message: "Hasta la vista!"
+        message: "Hasta la vista!",
       },
       {
-        message: "Bye for now!"
-      }
+        message: "Bye for now!",
+      },
     ],
     dialogs: [
       {
         name: "John",
-        id: 1
+        id: 1,
       },
       {
         name: "Amy",
-        id: 2
+        id: 2,
       },
       {
         name: "Mike",
-        id: 3
+        id: 3,
       },
       {
         name: "Greg",
-        id: 4
+        id: 4,
       },
     ],
-  }
-}
+  },
+};
 
 export const addPost = (postMessage) => {
-  // debugger;
   const newPost = {
     id: 5,
     message: postMessage,
-    likes: 0
-  }
-  state.profilePage.posts.push(newPost)
-}
+    likes: 0,
+  };
+  state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+};
 
 export default state;
