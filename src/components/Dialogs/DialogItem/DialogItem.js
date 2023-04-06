@@ -17,9 +17,7 @@ const DialogItem = (props) => {
     <div className={s.dialogItems}>
       <NavLink
         className={(navData) => (navData.isActive ? s.active : s.dialog)}
-        to={path}
-      >
-        {props.name}
+        to={path}>{props.name}
       </NavLink>
       <div className={styles.posts}>
         <textarea ref={newPost}></textarea>
