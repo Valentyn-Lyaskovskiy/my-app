@@ -8,7 +8,7 @@ const Menu = () => {
       <ul>
         <li className={s.item}>
           <NavLink
-            className={(navData) => (navData.isActive ? s.activeLink : s.item)}
+            className={(navData) => (navData.isActive ? s.active : s.item)}
             to="/profile"
           >
             Profile
@@ -16,7 +16,7 @@ const Menu = () => {
         </li>
         <li className={s.item}>
           <NavLink
-            className={(navData) => (navData.isActive ? s.activeLink : s.item)}
+            className={(navData) => (navData.isActive ? s.active : s.item)}
             to="/dialogs"
           >
             Messages
