@@ -4,8 +4,8 @@ import s from "./Menu.module.css";
 
 const Menu = () => {
   return (
-    <nav className={s.menu}>
-      <ul>
+    <div className={s.menu}>
+      <nav>
         <li className={s.item}>
           <NavLink
             className={(navData) => (navData.isActive ? s.active : s.item)}
@@ -35,8 +35,13 @@ const Menu = () => {
             Settings
           </a>
         </li>
-      </ul>
-    </nav>
+      </nav>
+      <div>Friends:
+        <p>Buckley</p>
+        <p>Christine</p>
+        <p>Ann</p>
+      </div>
+    </div>
   );
 };
 
