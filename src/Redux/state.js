@@ -19,6 +19,7 @@ const state = {
         likes: 11,
       },
     ],
+    newPostText: "",
   },
   messagePage: {
     messages: [
@@ -56,13 +57,19 @@ const state = {
   },
 };
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
   const newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: 0,
   };
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = "";
+  rerenderEntireTree(state);
+};
+
+export const updatePost = (text) => {
+  state.profilePage.newPostText = text;
   rerenderEntireTree(state);
 };
 

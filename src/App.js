@@ -15,14 +15,17 @@ function App(props) {
         <Routes>
           <Route
             path="/profile"
-            element={<Profile state={props.state.profilePage} addPost={props.addPost} />}
+            element={
+              <Profile
+                profilePage={props.state.profilePage}
+                addPost={props.addPost}
+                updatePost={props.updatePost}
+              />
+            }
           />
           <Route
             path="/dialogs/*"
-            element={
-              <Dialogs state={props.state.messagePage}
-              />
-            }
+            element={<Dialogs state={props.state.messagePage} />}
           />
         </Routes>
       </div>

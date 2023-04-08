@@ -35,12 +35,11 @@ const Menu = () => {
             Settings
           </a>
         </li>
-      </nav>
-      <div>Friends:
+        <p className={s.friends}>Friends:</p>
         <p>Buckley</p>
         <p>Christine</p>
         <p>Ann</p>
-      </div>
+      </nav>
     </div>
   );
 };
