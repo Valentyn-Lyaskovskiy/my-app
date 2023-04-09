@@ -57,6 +57,8 @@ const state = {
   },
 };
 
+// window.state = state;
+
 export const addPost = () => {
   const newPost = {
     id: 5,

@@ -12,6 +12,7 @@ const MyPosts = (props) => {
   const addPost = () => {
     props.addPost();
   };
+
   const postChange = () => {
     const text = newPostEl.current.value;
     props.updatePost(text);
