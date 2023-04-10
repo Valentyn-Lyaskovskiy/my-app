@@ -5,6 +5,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
 import Profile from "./components/Profile/Profile";
+import { addPost } from "./Redux/state";
 
 function App(props) {
   return (
@@ -18,7 +19,7 @@ function App(props) {
             element={
               <Profile
                 profilePage={props.state.profilePage}
-                addPost={props.addPost}
+                addPost={addPost}
                 updatePost={props.updatePost}
               />
             }

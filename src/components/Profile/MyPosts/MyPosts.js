@@ -11,6 +11,7 @@ const MyPosts = (props) => {
 
   const addPost = () => {
     props.addPost();
+    // props.updatePost(""); bad practice;moved to state.js :69
   };
 
   const postChange = () => {

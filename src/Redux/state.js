@@ -57,7 +57,7 @@ const state = {
   },
 };
 
-// window.state = state;
+window.state = state;
 
 export const addPost = () => {
   const newPost = {
