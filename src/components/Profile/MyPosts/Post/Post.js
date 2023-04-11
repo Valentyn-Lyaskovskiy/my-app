@@ -4,10 +4,10 @@ import s from "./Post.module.css";
 const Post = (props) => {
   return (
     <div className={s.posts}>
-      <p>
+      <h4>
         {props.message}
         <span className={s.post}>{props.likes}</span>
-      </p>
+      </h4>
     </div>
   );
 };

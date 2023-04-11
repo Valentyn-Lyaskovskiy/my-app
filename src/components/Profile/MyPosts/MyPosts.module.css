@@ -26,4 +26,5 @@
 
 textarea {
   margin-bottom: 12px;
+  resize: none;
 }
