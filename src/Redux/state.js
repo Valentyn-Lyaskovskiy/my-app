@@ -1,6 +1,6 @@
 let rerenderEntireTree = () => {
-  console.log('React');
-}
+  console.log("React");
+};
 
 const state = {
   profilePage: {
@@ -78,6 +78,16 @@ export const updatePost = (text) => {
 };
 
 export const subscribe = (observer) => {
-  rerenderEntireTree = observer
-}
+  rerenderEntireTree = observer;
+};
+
+export const addDialogPost = (text) => {
+  const newDialogPost = {
+    message: text,
+    id: 1,
+  };
+  state.messagePage.messages.push(newDialogPost);
+  rerenderEntireTree(state);
+};
+
 export default state;
