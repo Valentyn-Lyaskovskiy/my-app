@@ -76,7 +76,7 @@ let store = {
     this._callSubscriber(this._state);
   },
   subscribe(observer) {
-    this.callSubscriber = observer;
+    this._callSubscriber = observer;
   },
   addDialogPost(text) {
     const newDialogPost = {
@@ -84,7 +84,7 @@ let store = {
       id: 0,
     };
     this._state.messagePage.messages.push(newDialogPost);
-    this.callSubscriber(this._state);
+    this._callSubscriber(this._state);
   }
 };
 
