@@ -10,7 +10,8 @@ let rerenderEntireTree = (state) => {
   root.render(<App
     state={state}
     addPost={store.addPost.bind(store)}
-    updatePost={store.updatePost.bind(store)} />);
+    updatePost={store.updatePost.bind(store)}
+    addDialogPost={store.addDialogPost.bind(store)} />);
 };
 
 rerenderEntireTree(store.getState());
