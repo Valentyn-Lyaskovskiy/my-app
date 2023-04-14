@@ -9,9 +9,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 let rerenderEntireTree = (state) => {
   root.render(<App
     state={state}
-    addPost={store.addPost.bind(store)}
-    updatePost={store.updatePost.bind(store)}
-    addDialogPost={store.addDialogPost.bind(store)} />);
+    dispatch={store.dispatch.bind(store)}
+  // addPost={store.addPost.bind(store)}
+  // updatePost={store.updatePost.bind(store)}
+  // addDialogPost={store.addDialogPost.bind(store)}
+  />);
 };
 
 rerenderEntireTree(store.getState());

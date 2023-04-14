@@ -6,7 +6,7 @@ import { addDialogPost } from "../../Redux/state";
 
 const Dialogs = (props) => {
   const dialogEl = props.state.dialogs.map((d) => (
-    <DialogItem name={d.name} id={d.id} addDialogPost={props.addDialogPost} />
+    <DialogItem name={d.name} id={d.id} dispatch={props.dispatch} />
   ));
   const messageEl = props.state.messages.map((m) => (
     <Message message={m.message} />

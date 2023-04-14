@@ -10,7 +10,7 @@ const DialogItem = (props) => {
   const newPost = React.createRef();
   const addPost = () => {
     const text = newPost.current.value;
-    props.addDialogPost(text);
+    props.dispatch({ type: 'ADD-DIALOG-POST', text });
     newPost.current.value = "";
   };
 

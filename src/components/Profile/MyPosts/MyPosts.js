@@ -10,13 +10,13 @@ const MyPosts = (props) => {
 
   const newPostEl = React.createRef();
   function addPost() {
-    props.addPost();
+    props.dispatch({ type: 'ADD-POST' });
     // props.updatePost(""); bad practice;moved to state.js :69
   };
 
   function postChange() {
     const text = newPostEl.current.value;
-    props.updatePost(text);
+    props.dispatch({ type: 'UPDATE-POST', text });
   };
 
   return (
