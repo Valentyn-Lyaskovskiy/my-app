@@ -9,6 +9,7 @@ const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;
 
   const newPost = React.createRef();
+
   const addPost = () => {
     const text = newPost.current.value;
     props.dispatch(addDialogPostActionCreator(text));

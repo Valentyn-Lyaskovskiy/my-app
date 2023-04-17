@@ -1,6 +1,7 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_POST = "UPDATE-POST";
-const ADD_DIALOG_POST = "ADD-DIALOG-POST";
+const UPDATE_DIALOG_POST = "UPDATE-DIALOG-POST";
+const SEND_POST = "SEND-POST";
 
 let store = {
   _callSubscriber() {
@@ -42,6 +43,7 @@ let store = {
           message: "Bye for now!",
         },
       ],
+      newMessageText: "",
       dialogs: [
         {
           name: "John",
@@ -103,12 +105,13 @@ let store = {
     } else if (action.type === UPDATE_POST) {
       this._state.profilePage.newPostText = action.text;
       this._callSubscriber(this._state);
-    } else if (action.type === ADD_DIALOG_POST) {
-      const newDialogPost = {
-        message: action.text,
-        id: 0,
-      };
-      this._state.messagePage.messages.push(newDialogPost);
+    } else if (action.type === UPDATE_DIALOG_POST) {
+      this._state.messagePage.newMessageText = action.body;
+      this._callSubscriber(this._state);
+    } else if (action.type === SEND_POST) {
+      let body = this._state.messagePage.newMessageText;
+      this._state.messagePage.newMessageText = "";
+      this._state.messagePage.messages.push({ message: body });
       this._callSubscriber(this._state);
     }
   },
@@ -122,7 +125,7 @@ export const addPostActionCreator = () => {
 
 export const addDialogPostActionCreator = (text) => {
   return {
-    type: ADD_DIALOG_POST,
+    type: UPDATE_DIALOG_POST,
     text,
   };
 };
