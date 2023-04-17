@@ -1,23 +1,28 @@
 import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import {
+  addPostActionCreator,
+  updatePostActionCreator,
+} from "../../../Redux/state";
 
 const MyPosts = (props) => {
-
   const postElements = props.posts.map((post) => (
     <Post message={post.message} likes={post.likes} />
   ));
 
   const newPostEl = React.createRef();
+
   function addPost() {
-    props.dispatch({ type: 'ADD-POST' });
+    props.dispatch(addPostActionCreator());
     // props.updatePost(""); bad practice;moved to state.js :69
-  };
+  }
 
   function postChange() {
     const text = newPostEl.current.value;
-    props.dispatch({ type: 'UPDATE-POST', text });
-  };
+    let action = updatePostActionCreator(text);
+    props.dispatch(action);
+  }
 
   return (
     <div className={s.posts}>

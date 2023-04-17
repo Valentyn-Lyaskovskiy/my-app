@@ -3,6 +3,7 @@ import "./DialogItem.module.css";
 import { NavLink } from "react-router-dom";
 import s from "./../Dialogs.module.css";
 import styles from "./DialogItem.module.css";
+import { addDialogPostActionCreator } from "../../../Redux/state";
 
 const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;
@@ -10,7 +11,7 @@ const DialogItem = (props) => {
   const newPost = React.createRef();
   const addPost = () => {
     const text = newPost.current.value;
-    props.dispatch({ type: 'ADD-DIALOG-POST', text });
+    props.dispatch(addDialogPostActionCreator(text));
     newPost.current.value = "";
   };
 
