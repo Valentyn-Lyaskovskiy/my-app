@@ -3,7 +3,10 @@ import "./DialogItem.module.css";
 import { NavLink } from "react-router-dom";
 import s from "./../Dialogs.module.css";
 import styles from "./DialogItem.module.css";
-import { addDialogPostActionCreator } from "../../../Redux/state";
+import {
+  addDialogPostActionCreator,
+  sendPostActionCreator,
+} from "../../../Redux/state";
 
 const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;

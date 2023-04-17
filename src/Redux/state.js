@@ -123,16 +123,22 @@ export const addPostActionCreator = () => {
   };
 };
 
-export const addDialogPostActionCreator = (text) => {
+export const updatePostActionCreator = (text) => {
   return {
-    type: UPDATE_DIALOG_POST,
+    type: UPDATE_POST,
     text,
   };
 };
 
-export const updatePostActionCreator = (text) => {
+export const sendPostActionCreator = () => {
   return {
-    type: UPDATE_POST,
+    type: SEND_POST,
+  };
+};
+
+export const addDialogPostActionCreator = (text) => {
+  return {
+    type: UPDATE_DIALOG_POST,
     text,
   };
 };
