@@ -30,6 +30,7 @@ function App(props) {
               <Dialogs
                 state={props.state.messagePage}
                 dispatch={props.dispatch}
+
                 // addDialogPost={props.addDialogPost}
               />
             }
