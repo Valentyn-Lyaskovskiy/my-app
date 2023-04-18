@@ -112,8 +112,8 @@ let store = {
       this._callSubscriber(this._state);
     } else if (action.type === UPDATE_DIALOG_POST) {
       let body = this._state.messagePage.newMessageText;
-      this._state.messagePage.newMessageText = "";
       this._state.messagePage.messages.push({ message: body });
+      this._state.messagePage.newMessageText = "";
       this._callSubscriber(this._state);
     }
   },
@@ -141,7 +141,7 @@ export const sendPostActionCreator = () => {
 export const addDialogPostActionCreator = (body) => {
   return {
     type: UPDATE_DIALOG_POST,
-    message: body,
+    body,
   };
 };
 

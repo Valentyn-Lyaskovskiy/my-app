@@ -22,7 +22,6 @@ const DialogItem = (props) => {
   const changePost = () => {
     const text = newPost.current.value;
     props.dispatch(sendPostActionCreator(text));
-    newPost.current.value = "";
   };
 
   return (
