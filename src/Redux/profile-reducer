@@ -1,0 +1,40 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_POST = "UPDATE-POST";
+
+const profileReducer = (state, action) => {
+  switch (action.type) {
+    case ADD_POST:
+      const newPost = {
+        id: 5,
+        message: this._state.profilePage.newPostText,
+        likes: 0,
+      };
+      posts.push(newPost);
+      newPostText = "";
+      return state;
+    case UPDATE_POST:
+      newPostText = action.text;
+      return state;
+    default:
+      return state;
+  }
+};
+
+const addPostActionCreator = () => {
+  return {
+    type: ADD_POST,
+  };
+};
+
+const updatePostActionCreator = (text) => {
+  return {
+    type: UPDATE_POST,
+    text,
+  };
+};
+
+export default {
+  addPostActionCreator,
+  updatePostActionCreator,
+  profileReducer,
+};

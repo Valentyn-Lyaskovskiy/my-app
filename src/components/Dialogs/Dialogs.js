@@ -5,7 +5,7 @@ import Message from "./Message/Message";
 import {
   addDialogPostActionCreator,
   sendPostActionCreator,
-} from './../../Redux/state';
+} from "../../Redux/dialog-reducer";
 
 const Dialogs = (props) => {
   const dialogEl = props.state.dialogs.map((d) => (
@@ -21,7 +21,6 @@ const Dialogs = (props) => {
 
   const addPost = () => {
     props.dispatch(sendPostActionCreator());
-
   };
 
   const changePost = () => {
@@ -37,7 +36,13 @@ const Dialogs = (props) => {
         <div>{messageEl}</div>
       </div>
       <div className={s.posts}>
-        <textarea className={s.textarea} placeholder="Enter your message" onChange={changePost} ref={newPost} value={newMessageText} />
+        <textarea
+          className={s.textarea}
+          placeholder="Enter your message"
+          onChange={changePost}
+          ref={newPost}
+          value={newMessageText}
+        />
         <button className={s.posts__btn} onClick={addPost}>
           Add a Post
         </button>

@@ -1,7 +1,4 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_POST = "UPDATE-POST";
-const ADD_DIALOG_POST = "ADD-DIALOG-POST";
-const UPDATE_DIALOG_POST = "UPDATE-DIALOG-POST";
+import profileReducer from "./profile-reducer";
 
 let store = {
   _callSubscriber() {
@@ -71,78 +68,10 @@ let store = {
     return this._state;
   },
 
-  // addPost() {
-  //   const newPost = {
-  //     id: 5,
-  //     message: this._state.profilePage.newPostText,
-  //     likes: 0,
-  //   };
-  //   this._state.profilePage.posts.push(newPost);
-  //   this._state.profilePage.newPostText = "";
-  //   this._callSubscriber(this._state);
-  // },
-  // updatePost(text) {
-  //   this._state.profilePage.newPostText = text;
-  //   this._callSubscriber(this._state);
-  // },
-  // addDialogPost(text) {
-  //   const newDialogPost = {
-  //     message: text,
-  //     id: 0,
-  //   };
-  //   this._state.messagePage.messages.push(newDialogPost);
-  //   this._callSubscriber(this._state);
-  // },
-
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      const newPost = {
-        id: 5,
-        message: this._state.profilePage.newPostText,
-        likes: 0,
-      };
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_POST) {
-      this._state.profilePage.newPostText = action.text;
-      this._callSubscriber(this._state);
-    } else if (action.type === ADD_DIALOG_POST) {
-      let body = this._state.messagePage.newMessageText;
-      this._state.messagePage.newMessageText = "";
-      this._state.messagePage.messages.push({ message: body });
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_DIALOG_POST) {
-      this._state.messagePage.newMessageText = action.body;
-      this._callSubscriber(this._state);
-    }
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.messagePage = profileReducer(this._state.messagePage, action);
   },
-};
-
-export const addPostActionCreator = () => {
-  return {
-    type: ADD_POST,
-  };
-};
-
-export const updatePostActionCreator = (text) => {
-  return {
-    type: UPDATE_POST,
-    text
-  };
-};
-
-export const sendPostActionCreator = () => {
-  return {
-    type: ADD_DIALOG_POST,
-  };
-};
-
-export const addDialogPostActionCreator = (body) => {
-  return {
-    type: UPDATE_DIALOG_POST,
-    body
-  };
 };
 
 window.store = store;
