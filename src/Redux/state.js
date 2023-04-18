@@ -70,6 +70,7 @@ let store = {
   getState() {
     return this._state;
   },
+
   // addPost() {
   //   const newPost = {
   //     id: 5,
@@ -92,6 +93,7 @@ let store = {
   //   this._state.messagePage.messages.push(newDialogPost);
   //   this._callSubscriber(this._state);
   // },
+
   dispatch(action) {
     if (action.type === ADD_POST) {
       const newPost = {
@@ -105,10 +107,10 @@ let store = {
     } else if (action.type === UPDATE_POST) {
       this._state.profilePage.newPostText = action.text;
       this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_DIALOG_POST) {
+    } else if (action.type === SEND_POST) {
       this._state.messagePage.newMessageText = action.body;
       this._callSubscriber(this._state);
-    } else if (action.type === SEND_POST) {
+    } else if (action.type === UPDATE_DIALOG_POST) {
       let body = this._state.messagePage.newMessageText;
       this._state.messagePage.newMessageText = "";
       this._state.messagePage.messages.push({ message: body });
@@ -136,10 +138,10 @@ export const sendPostActionCreator = () => {
   };
 };
 
-export const addDialogPostActionCreator = (text) => {
+export const addDialogPostActionCreator = (body) => {
   return {
     type: UPDATE_DIALOG_POST,
-    text,
+    message: body,
   };
 };
 

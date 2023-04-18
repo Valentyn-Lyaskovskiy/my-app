@@ -15,7 +15,13 @@ const DialogItem = (props) => {
 
   const addPost = () => {
     const text = newPost.current.value;
-    props.dispatch(addDialogPostActionCreator(text));
+    props.dispatch(addDialogPostActionCreator());
+    newPost.current.value = "";
+  };
+
+  const changePost = () => {
+    const text = newPost.current.value;
+    props.dispatch(sendPostActionCreator(text));
     newPost.current.value = "";
   };
 
@@ -28,7 +34,7 @@ const DialogItem = (props) => {
         {props.name}
       </NavLink>
       <div className={styles.posts}>
-        <textarea ref={newPost}></textarea>
+        <textarea onChange={changePost} ref={newPost} />
         <button className={styles.posts__btn} onClick={addPost}>
           Add a Post
         </button>
