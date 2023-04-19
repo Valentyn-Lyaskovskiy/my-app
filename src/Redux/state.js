@@ -1,4 +1,5 @@
-import profileReducer from "./profile-reducer";
+import profileReducer from "./profile-reducer.js";
+import dialogReducer from "./dialog-reducer.js";
 
 let store = {
   _callSubscriber() {
@@ -70,7 +71,7 @@ let store = {
 
   dispatch(action) {
     this._state.profilePage = profileReducer(this._state.profilePage, action);
-    this._state.messagePage = profileReducer(this._state.messagePage, action);
+    this._state.messagePage = dialogReducer(this._state.messagePage, action);
   },
 };
 

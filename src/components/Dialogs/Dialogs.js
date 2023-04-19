@@ -5,7 +5,7 @@ import Message from "./Message/Message";
 import {
   addDialogPostActionCreator,
   sendPostActionCreator,
-} from "../../Redux/dialog-reducer";
+} from "../../Redux/dialog-reducer.js";
 
 const Dialogs = (props) => {
   const dialogEl = props.state.dialogs.map((d) => (
