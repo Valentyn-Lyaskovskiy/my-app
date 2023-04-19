@@ -15,11 +15,10 @@ const MyPosts = (props) => {
 
   function addPost() {
     props.dispatch(addPostActionCreator());
-    // props.updatePost(""); bad practice;moved to state.js :69
   }
 
   function postChange() {
-    const text = newPostEl.current.value;
+    let text = newPostEl.current.value;
     let action = updatePostActionCreator(text);
     props.dispatch(action);
   }

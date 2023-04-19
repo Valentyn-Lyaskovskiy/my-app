@@ -4,6 +4,11 @@
   display: grid;
   grid-template-columns: 4fr 10fr;
   grid-template-rows: 1fr 2fr;
+  margin-bottom: 12px;
+}
+
+.dialogItems {
+  margin-bottom: 12px;
 }
 
 .dialogItems .active {
@@ -12,7 +17,7 @@
   text-transform: uppercase;
 }
 
-.messages {
+.messages div {
   margin-bottom: 12px;
 }
 

@@ -17,33 +17,28 @@ const Dialogs = (props) => {
 
   let newMessageText = props.state.newMessageText;
 
-  const newPost = React.createRef();
-
-  const addPost = () => {
-    props.dispatch(sendPostActionCreator());
+  const postAdd = () => {
+    props.state.dispatch(sendPostActionCreator());
   };
 
-  const changePost = () => {
-    const text = newPost.current.value;
-    let action = addDialogPostActionCreator(text);
+  const changePost = (e) => {
+    let postText = e.target.value;
+    let action = addDialogPostActionCreator(postText);
     props.dispatch(action);
   };
 
   return (
     <div className={s.dialogs}>
       <div className={s.dialogItems}>{dialogEl}</div>
-      <div>
-        <div>{messageEl}</div>
-      </div>
+      <div className={s.messages}>{messageEl}</div>
       <div className={s.posts}>
         <textarea
           className={s.textarea}
           placeholder="Enter your message"
           onChange={changePost}
-          ref={newPost}
           value={newMessageText}
         />
-        <button className={s.posts__btn} onClick={addPost}>
+        <button className={s.posts__btn} onClick={postAdd}>
           Add a Post
         </button>
       </div>

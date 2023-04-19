@@ -7,9 +7,9 @@ const dialogReducer = (state, action) => {
       state.newMessageText = action.body;
       return state;
     case ADD_DIALOG_POST:
-      let body = state.newMessageText;
+      let res = state.newMessageText;
       state.newMessageText = '';
-      state.messages.push({ message: body })
+      state.messages.push({ message: res })
       return state;
     default:
       return state;
@@ -22,10 +22,10 @@ export const sendPostActionCreator = () => {
   };
 };
 
-export const addDialogPostActionCreator = (body) => {
+export const addDialogPostActionCreator = (postText) => {
   return {
     type: UPDATE_DIALOG_POST,
-    body,
+    body: postText
   };
 };
 

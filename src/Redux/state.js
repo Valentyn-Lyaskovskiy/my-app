@@ -41,7 +41,6 @@ let store = {
           message: "Bye for now!",
         },
       ],
-      newMessageText: "",
       dialogs: [
         {
           name: "John",
@@ -60,6 +59,7 @@ let store = {
           id: 4,
         },
       ],
+      newMessageText: "",
     },
   },
   subscribe(observer) {
@@ -68,7 +68,6 @@ let store = {
   getState() {
     return this._state;
   },
-
   dispatch(action) {
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.messagePage = dialogReducer(this._state.messagePage, action);
