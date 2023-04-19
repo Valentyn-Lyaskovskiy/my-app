@@ -18,7 +18,7 @@ const Dialogs = (props) => {
   let newMessageText = props.state.newMessageText;
 
   const postAdd = () => {
-    props.state.dispatch(sendPostActionCreator());
+    props.dispatch(sendPostActionCreator());
   };
 
   const changePost = (e) => {
