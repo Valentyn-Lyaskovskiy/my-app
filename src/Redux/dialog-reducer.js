@@ -3,13 +3,13 @@ const UPDATE_DIALOG_POST = "UPDATE-DIALOG-POST";
 
 const dialogReducer = (state, action) => {
   switch (action.type) {
+    case ADD_DIALOG_POST:
+      let body = state.newMessageText;
+      state.newMessageText = "";
+      state.messages.push({ message: body });
+      return state;
     case UPDATE_DIALOG_POST:
       state.newMessageText = action.body;
-      return state;
-    case ADD_DIALOG_POST:
-      let res = state.newMessageText;
-      state.newMessageText = '';
-      state.messages.push({ message: res })
       return state;
     default:
       return state;
@@ -22,12 +22,11 @@ export const sendPostActionCreator = () => {
   };
 };
 
-export const addDialogPostActionCreator = (postText) => {
+export const addDialogPostActionCreator = (body) => {
   return {
     type: UPDATE_DIALOG_POST,
-    body: postText
+    body,
   };
 };
 
 export default dialogReducer;
-

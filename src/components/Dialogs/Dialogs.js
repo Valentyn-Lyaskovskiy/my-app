@@ -17,7 +17,7 @@ const Dialogs = (props) => {
 
   let newMessageText = props.state.newMessageText;
 
-  const postAdd = () => {
+  const Addpost = () => {
     props.dispatch(sendPostActionCreator());
   };
 
@@ -38,7 +38,7 @@ const Dialogs = (props) => {
           onChange={changePost}
           value={newMessageText}
         />
-        <button className={s.posts__btn} onClick={postAdd}>
+        <button className={s.posts__btn} onClick={Addpost}>
           Add a Post
         </button>
       </div>
