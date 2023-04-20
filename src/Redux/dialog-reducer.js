@@ -16,17 +16,8 @@ const dialogReducer = (state, action) => {
   }
 };
 
-export const sendPostActionCreator = () => {
-  return {
-    type: ADD_DIALOG_POST,
-  };
-};
+export const sendPostActionCreator = () => ({ type: ADD_DIALOG_POST, });
 
-export const addDialogPostActionCreator = (body) => {
-  return {
-    type: UPDATE_DIALOG_POST,
-    body,
-  };
-};
+export const addDialogPostActionCreator = (body) => ({ type: UPDATE_DIALOG_POST, body });
 
 export default dialogReducer;
