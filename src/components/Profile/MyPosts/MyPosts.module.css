@@ -12,19 +12,21 @@
   cursor: pointer;
   color: #fff;
   transition: all 0.3s ease;
+  display: block;
 }
 
 .posts__btn:hover {
   color: #00d8ff;
 }
 
-.posts__wrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+textarea::placeholder{
+  padding: 4px;
+  color: rgba(0, 0, 128, 0.6);
 }
 
 textarea {
+  border: 1px solid #00d8ff;
   margin-bottom: 12px;
   resize: none;
+  border-radius: 8px;
 }

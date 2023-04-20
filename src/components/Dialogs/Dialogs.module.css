@@ -37,7 +37,12 @@
   color: #00d8ff;
 }
 
+.textarea{
+  border-radius: 8px;
+  border: 1px solid #00d8ff;
+}
+
 .textarea::placeholder {
-  padding: 2px;
+  padding: 4px;
   color: rgba(0, 0, 128, 0.6);
 }

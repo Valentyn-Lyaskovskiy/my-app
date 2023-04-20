@@ -26,7 +26,10 @@ const MyPosts = (props) => {
   return (
     <div className={s.posts}>
       <div className={s.posts__wrapper}>
+        <div>{postElements}</div>
         <textarea
+          className='textarea'
+          placeholder='Enter your post'
           onChange={postChange}
           ref={newPostEl}
           value={props.newPostText}
@@ -35,7 +38,6 @@ const MyPosts = (props) => {
           Add a Post
         </button>
       </div>
-      <div>{postElements}</div>
     </div>
   );
 };
