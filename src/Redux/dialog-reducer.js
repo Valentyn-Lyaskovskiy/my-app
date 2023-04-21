@@ -1,7 +1,43 @@
 const ADD_DIALOG_POST = "ADD-DIALOG-POST";
 const UPDATE_DIALOG_POST = "UPDATE-DIALOG-POST";
 
-const dialogReducer = (state, action) => {
+let initialState = {
+  messages: [
+    {
+      message: "Hi, buddy!",
+    },
+    {
+      message: "Ping me when you are free.",
+    },
+    {
+      message: "Hasta la vista!",
+    },
+    {
+      message: "Bye for now!",
+    },
+  ],
+  dialogs: [
+    {
+      name: "John",
+      id: 1,
+    },
+    {
+      name: "Amy",
+      id: 2,
+    },
+    {
+      name: "Mike",
+      id: 3,
+    },
+    {
+      name: "Greg",
+      id: 4,
+    },
+  ],
+  newMessageText: "",
+}
+
+const dialogReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_DIALOG_POST:
       let body = state.newMessageText;
