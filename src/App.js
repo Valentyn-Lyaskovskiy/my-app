@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/Dialogs";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
 import Profile from "./components/Profile/Profile";
@@ -13,23 +13,10 @@ function App(props) {
         <Header />
         <Menu />
         <Routes>
-          <Route
-            path="/profile"
-            element={
-              <Profile
-                store={props.store}
-                dispatch={props.dispatch}
-              />
-            }
-          />
+          <Route path="/profile" element={<Profile store={props.store} />} />
           <Route
             path="/dialogs/*"
-            element={
-              <Dialogs
-                state={props.state.messagePage}
-                dispatch={props.dispatch}
-              />
-            }
+            element={<DialogsContainer store={props.store} />}
           />
         </Routes>
       </div>

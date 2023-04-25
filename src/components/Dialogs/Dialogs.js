@@ -2,29 +2,25 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {
-  addDialogPostActionCreator,
-  sendPostActionCreator,
-} from "../../Redux/dialog-reducer.js";
 
 const Dialogs = (props) => {
-  const dialogEl = props.state.dialogs.map((d) => (
+  debugger;
+  let state = props.messagePage;
+
+  const dialogEl = state.dialogs.map((d) => (
     <DialogItem name={d.name} id={d.id} />
   ));
-  const messageEl = props.state.messages.map((m) => (
-    <Message message={m.message} />
-  ));
+  const messageEl = state.messages.map((m) => <Message message={m.message} />);
 
-  let newMessageText = props.state.newMessageText;
+  let newMessageText = state.newMessageText;
 
   const Addpost = () => {
-    props.dispatch(sendPostActionCreator());
+    props.addPost();
   };
 
   const changePost = (e) => {
-    let postText = e.target.value;
-    let action = addDialogPostActionCreator(postText);
-    props.dispatch(action);
+    let text = e.current.target;
+    props.changePost(text);
   };
 
   return (
