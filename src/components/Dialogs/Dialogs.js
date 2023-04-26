@@ -14,7 +14,7 @@ const Dialogs = (props) => {
 
   let newMessageText = state.newMessageText;
 
-  const Addpost = () => {
+  const addPost = () => {
     props.addPost();
   };
 
@@ -34,7 +34,7 @@ const Dialogs = (props) => {
           onChange={changePost}
           value={newMessageText}
         />
-        <button className={s.posts__btn} onClick={Addpost}>
+        <button className={s.posts__btn} onClick={addPost}>
           Add a Post
         </button>
       </div>
