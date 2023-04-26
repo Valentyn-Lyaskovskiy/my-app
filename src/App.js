@@ -27,6 +27,7 @@ function App(props) {
             element={
               <Dialogs
                 state={props.state.messagePage}
+                // store={props.store}
                 dispatch={props.dispatch}
               />
             }
