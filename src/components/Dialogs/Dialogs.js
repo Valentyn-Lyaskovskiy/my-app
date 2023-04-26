@@ -4,13 +4,13 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-  debugger;
   let state = props.messagePage;
+
+  const messageEl = state.messages.map((m) => <Message message={m.message} />);
 
   const dialogEl = state.dialogs.map((d) => (
     <DialogItem name={d.name} id={d.id} />
   ));
-  const messageEl = state.messages.map((m) => <Message message={m.message} />);
 
   let newMessageText = state.newMessageText;
 
@@ -19,8 +19,8 @@ const Dialogs = (props) => {
   };
 
   const changePost = (e) => {
-    let text = e.current.target;
-    props.changePost(text);
+    let body = e.target.value;
+    props.changePost(body);
   };
 
   return (

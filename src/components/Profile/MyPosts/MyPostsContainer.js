@@ -5,8 +5,9 @@ import {
 } from "../../../Redux/profile-reducer.js";
 import MyPosts from "./MyPosts";
 
-const MyPostsContainer = (props) => {
-  let state = props.store.getState();
+function MyPostsContainer(props) {
+  debugger;
+  let state = props.store;
 
   function addPost() {
     props.store.dispatch(addPostActionCreator());
@@ -21,8 +22,8 @@ const MyPostsContainer = (props) => {
     <MyPosts
       updateNewPostText={postChange}
       addPost={addPost}
-      posts={state.profilePage.posts}
-      newPostText={state.profilePage.newPostText}
+      posts={props.store.profilePage.posts}
+      newPostText={props.store.profilePage.newPostText}
     />
   );
 };

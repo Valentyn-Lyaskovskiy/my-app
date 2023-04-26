@@ -12,9 +12,8 @@ const DialogsContainer = (props) => {
     props.store.dispatch(sendPostActionCreator());
   };
 
-  const changePost = (text) => {
-    let action = addDialogPostActionCreator(text);
-    props.store.dispatch(action);
+  const changePost = (body) => {
+    props.store.dispatch(addDialogPostActionCreator(body));
   };
 
   return (
@@ -26,4 +25,5 @@ const DialogsContainer = (props) => {
     />
   );
 };
+
 export default DialogsContainer;
